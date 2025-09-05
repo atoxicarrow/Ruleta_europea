@@ -1,32 +1,116 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style = "background-color: white;">
-<div class="contenedor-form" >
-    <form action="/perfil" method="post">
-        <div>
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario">
-        </div>
-        <div>
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña" required>
-        </div>
-        <div>
-            <button type="submit">Iniciar Sesión</button>
-        </div>
-        <div class = olvido>
-            <a href="#">¿Olvidaste la contraseña?</a>
-        </div>
-    </form>
-</div>
+<body class="login-bg">
+<header>
+    <div class="banner">
+        <a class="contenedor-bar">
+            <nav aria-label="Menu principal" class="main-nav">
+                <ul>
+                    <li class="logo-nav">
+                        <a href="/index.html">
+                            <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
+                        </a>
+                    </li>
+                    <li><a href="/historia.html">Historia</a></li>
+                    <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="ruleta.html">Ruleta</a></li>
+                    <li><a href="transacciones.html">Transacciones</a></li>
+                    <li><a href="/login.html" aria-current="page">Iniciar Sesión</a></li>
+                    <li><a href="/registro.html">Registro</a></li>
+                </ul>
+            </nav>
+        </a>
+    </div>
+</header>
 
+
+<div class="contenedor-form" >
+    <div class ="form-login">
+        <form action="/perfil.html" method="get">
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+            </div>
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <div class="botones-login">
+                <button type="submit" class="btn-iniciar">Iniciar Sesión</button>
+                <a href="/registro.html" class="btn-registro">Registrarte</a>
+            </div>
+            <div class = olvido>
+                <a href="/images/si.jpg" target="_blank">¿Olvidaste la contraseña?</a>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso al Casino</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- ACA CAJAAA-->
+<header>
+  <h1 style="color:black;">Casino del PAPU</h1>
+
+  <!-- Hack del checkbox -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="registro.html">Registro</a>
+    <a href="login.html">Acceso</a>
+    <a href="historia.html">Historia y Reglas</a>
+    <a href="desarrolladores.html">Desarrolladores</a>
+  </nav>
+</header>
+
+<!-- ACA TERMINA-->
+
+<body>
+
+  <main>
+    <div class ="contenedor">
+      <div class = "div-login">
+    <section class="form-container">
+      <h2>Acceso al Casino</h2>
+      <form action="perfil.html" method="get">
+        <label for="usuario">Nombre de usuario</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </section>
+      </div>
+  </div>
+  </main>
+  
+</body>
+</html>
+>>>>>>> d59abdb5a15fa122d857d300e21d642dc371cc90
