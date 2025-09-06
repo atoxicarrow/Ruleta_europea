@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Historia de la Ruleta</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="historia-bg">
@@ -17,7 +17,7 @@
                             <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
                         </a>
                     </li>
-                    <li><a href="/historia.html"aria-current="page">Historia</a></li>
+                    <li><a href="/historia.html" aria-current="page">Historia</a></li>
                     <li><a href="/desarrolladores.html">Desarrolladores</a></li>
                     <li><a href="perfil.html">Perfil</a></li>
                     <li><a href="ruleta.html">Ruleta</a></li>
@@ -29,33 +29,103 @@
         </a>
     </div>
 </header>
+
 <main class="contenedor" role="main">
     <header class="cabeza-pag">
-        <h1>Historia y Reglas de la Ruleta Europea.</h1>
+        <section class="hero-historia">
+            <div class="hero-content">
+                <h1>Historia y reglas de la Ruleta Europea</h1>
+                <div class="hero-btns">
+                    <button class="historia-btn" onclick="location.href='#historia-cards'">Ver Historia</button>
+                    <button class="reglas-btn" onclick="location.href='#reglas-cards'">Ver Reglas</button>
+                </div>
+            </div>
+        </section>
     </header>
-<article class="card">
-    <h2>Origen</h2>
-    <p>La ruleta europea se popularizó en el siglo XIX, cuando 2 hermanos apliacron un pequeño cambio a a rueda de la ruleta convencional. La mesa combina una rueda con números 0–36 y un tapete donde se registran las apuestas.</p>
-</article>
-<article class="card">
-    <h2>Tipos de apuestas</h2>
-    <ul class="check">
-        <li><strong>Pleno</strong>(un número): paga 35 a 1</li>
-        <li><strong>Caballo</strong>paga 17 a 1.</li>
-        <li><strong>Calle</strong>paga 11 a 1.</li>
-        <li><strong>Cuadro</strong>paga 8 a 1.</li>
-        <li><strong>Líneas</strong>paga 5 a 1.</li>
-        <li><strong>Docenas / Columnas</strong>(12 números): paga 2 a 1.</li>
-        <li><strong>Par/Impar, Rojo/Negro, 1–18/19–36:</strong>paga 1 a 1.</li>
-    </ul>
-</article>
-<article class="card">
-    <h2>Probabilidades y pagos</h2>
-</article>
-<article class="card"></article>
 
+    <section id="historia-cards">
+        <h2 class="seccion-titulo">Historia</h2>
+        <article class="card">
+            <h3>El origen de la ruleta</h3>
+            <p>La intención del polifacético Blaise Pascal era crear una rueda en movimiento perpetuo… pero, como todos sabemos, no consiguió este objetivo. En su lugar apareció la ruleta y con ella uno de los juegos de casino más populares y entretenidos de todo el mundo. Todo este episodio se remonta al siglo XVII, y desde entonces su uso no ha ido más que creciendo paulatinamente.</p>
+            <p>Pascal se adentró en la teoría de la probabilidad y para ello empleó este invento. Si bien no le sirvió como pretendía, al menos dotó al mundo con este juego tan imprescindible en los casinos, como Luckia o LeoVegas. Es cierto que existen otras teorías sobre la invención de la actual ruleta, pero Blaise Pascal fue sin duda una persona esencial con sus aportes.</p>
+        </article>
+    </section>
 
+    <section id="reglas-cards">
+        <h2 class="seccion-titulo">Reglas</h2>
+        <article class="card">
+            <h3>Tipos de apuestas y sus pagos</h3>
+            <table class="tabla-apuestas">
+                <thead>
+                    <tr>
+                        <th>Tipo de Apuesta</th>
+                        <th>Descripción</th>
+                        <th>Pago</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pleno (Straight Up)</strong></td>
+                        <td>Apostar a un solo número.</td>
+                        <td>35 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Caballo (Split)</strong></td>
+                        <td>Apostar a dos números adyacentes.</td>
+                        <td>17 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transversal (Street)</strong></td>
+                        <td>Apostar a una fila de tres números.</td>
+                        <td>11 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cuadra (Corner)</strong></td>
+                        <td>Apostar a un bloque de cuatro números.</td>
+                        <td>8 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Línea (Double Street)</strong></td>
+                        <td>Apostar a dos filas adyacentes (6 números).</td>
+                        <td>5 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Columna (Column)</strong></td>
+                        <td>Apostar a una de las tres columnas verticales (12 números).</td>
+                        <td>2 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Docena (Dozen)</strong></td>
+                        <td>Apostar a un grupo de 12 números (1-12, 13-24, 25-36).</td>
+                        <td>2 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rojo/Negro</strong></td>
+                        <td>Apostar al color del número.</td>
+                        <td>1 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Par/Impar</strong></td>
+                        <td>Apostar a la paridad del número.</td>
+                        <td>1 a 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Falta/Pasa</strong></td>
+                        <td>Apostar a los números bajos (1-18) o altos (19-36).</td>
+                        <td>1 a 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article class="card">
+            <h3>Reglas básicas del juego</h3>
+            <p>La ruleta europea es un juego de casino donde los jugadores apuestan sobre el número o grupo de números en los que creen que caerá una pequeña bola después de girar la rueda. La rueda europea tiene 37 números (0-36), a diferencia de la americana que tiene 38 (con doble cero).</p>
+            <p>El juego comienza cuando los jugadores colocan sus fichas en el tapete correspondiente a sus apuestas. El crupier gira la rueda en un sentido y lanza la bola en el sentido contrario. Cuando la bola cae en un número, el crupier anuncia el resultado y paga a los ganadores según la tabla de pagos establecida.</p>
+        </article>
+    </section>
 </main>
 
-
 </body>
+</html>

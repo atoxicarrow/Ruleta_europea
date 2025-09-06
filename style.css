@@ -137,6 +137,16 @@ body, header{
 
 /* LOGIN */
 
+.form-login form {
+    width: 100%;
+    max-width: 700px;
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    margin: 32px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .botones-login {
     display: flex;
     gap:12px;
@@ -153,6 +163,7 @@ body, header{
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+    
 }
 
 .btn-iniciar:hover {
@@ -178,6 +189,8 @@ body, header{
     background: #a1400f;
 }
 
+
+
 .form-login button[type="submit"]:hover {
     background: #35796b;
 }
@@ -188,11 +201,12 @@ body, header{
     padding: 18px;
     margin-bottom: 16px;
     border: 2px solid #000000;
-    border-radius: 20px;
     box-sizing: border-box;
     outline:none;
     font-size: 16px;
     transition: border-color 0.2s, box-shadow 0.2s;
+     border: 1.5px solid #bbb;
+    border-radius: 12px;
 }
 
 .olvido{
@@ -214,6 +228,7 @@ body, header{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-registro form {
@@ -222,7 +237,6 @@ body, header{
     padding: 32px 32px 32px 32px;
     border-radius: 16px;
     background: #fff;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
     margin: 32px auto;
 }
 
@@ -276,8 +290,665 @@ body, header{
     border-radius: 25px;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #35796b;
     cursor: pointer;
     margin-top: 12px;
-    background-color: 35796b;
+    background: #35796b;
+}
+
+.btn-registrarse:hover {
+    background: #a1400f;
+    color: #fff;
+}
+
+/* Historia */
+
+main.contenedor {
+    max-width: 1600px;
+    margin: 40px auto;
+    padding: 24px 16px;
+    border-radius: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.cabeza-pag{
+    text-align: center;
+    color: #c2c2c2;
+    font-size: 32px;
+    font-weight: arial;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.titulo-historia{
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 16px;
+}
+
+.card{
+    background: #d3d2cf;
+    padding: 24px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+
+
+.hero-historia {
+    width: center;
+    min-height: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 610px;
+    
+}
+
+.hero-btns{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.historia-btn {
+    background: #4CA094;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 16px 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+.historia-btn:hover {
+    background: #35796b;
+}
+
+
+.reglas-btn {
+    background: #4CA094;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 16px 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px;
+    box-shadow: 0 2px 8px rgba(76,160,148,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.reglas-btn:hover {
+    background: #35796b;
+}
+
+/* TABLA HISTORIA*/
+.tabla-apuestas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabla-apuestas thead {
+    background-color: #4CA094;
+    color: white;
+}
+
+.tabla-apuestas th {
+    padding: 16px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tabla-apuestas td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-apuestas tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-apuestas tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-apuestas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-apuestas strong {
+    color: #375B77;
+}
+
+.seccion-titulo {
+    text-align: center;
+    color: #375B77;
+    font-size: 40px;
+    margin: 40px 0 20px;
+    font-weight: bold;
+}
+
+.card h3 {
+    color: #4CA094;
+    font-size: 27px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #4CA094;
+    padding-bottom: 8px;
+}
+
+.card p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+#reglas-cards {
+    margin-top: 50px;
+}
+
+/* INDEX */
+.contenedor-index {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-index {
+    text-align: center;
+    padding: 80px 20px;
+    color: #ffffff;
+}
+
+.hero-content-index h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content-index p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero-btns-index {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-index {
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-index:hover {
+    opacity: 0.9;
+    color:#1c463f;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-secundario:hover{
+    opacity: 0.9;
+    background: #4aa84a;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primario {
+    background: #4CA094;
+    color: #ffffff;
+    border: 2px solid #4CA094;
+}
+
+.btn-secundario {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.caracteristicas-index {
+    padding: 60px 20px;
+    background: #375B77;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.caracteristicas-index h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.grid-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-caracteristica {
+    background: #d3d2cf;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-caracteristica h3 {
+    color: #375B77;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-caracteristica p {
+    color: #666666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.acciones-rapidas {
+    padding: 60px 20px;
+}
+
+.acciones-rapidas h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cuadro-acciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-accion {
+    background: #375B77;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card-accion h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-accion p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.footer-index {
+    text-align: center;
+    padding: 30px;
+    color: #ffffff;
+    background: #375B77;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+
+/* Ruleta */
+
+/* Transaccion */
+
+/* DESARROLLADORES */
+.titulo-desarrolladores {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 16px;
+    background: #375B77;
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.seccion-app,
+.seccion-tecnologias,
+.seccion-equipo,
+.seccion-aclaracion {
+    margin-bottom: 40px;
+}
+
+.card-app,
+.card-tecnologias,
+.card-equipo,
+.card-aclaracion {
+    background: #d3d2cf;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    color: #375B77;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #4CA094;
+}
+
+.card p {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.lista-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.lista-caracteristicas li {
+    color: #555555;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.lista-caracteristicas li:before {
+    content: "•";
+    color: #4CA094;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.grid-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tecnologia-item {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #375B77;
+}
+
+.tecnologia-item h3 {
+    color: #375B77;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.tecnologia-item p {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.grid-equipo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.miembro-equipo {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 5px solid #4CA094;
+}
+
+.miembro-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #EEEEEE;
+}
+
+.miembro-header h3 {
+    color: #375B77;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.miembro-rol {
+    color: #4CA094;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.miembro-desc {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.card-aclaracion {
+    background: #375B77;
+    color: #FFFFFF;
+}
+
+.card-aclaracion h2 {
+    color: #FFFFFF;
+    border-bottom-color: #4CA094;
+}
+
+.card-aclaracion p {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+
+
+/* PERFIL */
+.contenedor-perfil {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-perfil {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.seccion-perfil,
+.seccion-saldo,
+.seccion-preferences,
+.seccion-actions {
+    margin-bottom: 30px;
+}
+
+.card-perfil,
+.card-saldo,
+.card-preferences,
+.card-actions {
+    background: #d3d2cf;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    color: #375B77;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #4CA094;
+}
+
+.perfil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.perfil-avatar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #375B77;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.perfil-avatar h2 {
+    color: #375B77;
+    font-size: 32px;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.btn-editar {
+    background: #4CA094;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.info-item h3 {
+    color: #375B77;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.info-datos p {
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.info-datos strong {
+    color: #375B77;
+}
+
+.card-saldo {
+    text-align: center;
+}
+
+.saldo-monto {
+    color: #4CA094;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.saldo-acciones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-deposito,
+.btn-retiro {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-deposito {
+    background: #4CA094;
+    color: #FFFFFF;
+}
+
+.btn-retiro {
+    background: #375B77;
+    color: #FFFFFF;
+}
+
+.preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.preference-item {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #4CA094;
+}
+
+.preference-item h3 {
+    color: #375B77;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.preference-item p {
+    color: #666666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.btn-action {
+    padding: 20px;
+    border: 2px solid #375B77;
+    border-radius: 15px;
+    background: #FFFFFF;
+    color: #375B77;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-logout {
+    background: #CC5C16;
+    color: #FFFFFF;
+    border: none;
 }

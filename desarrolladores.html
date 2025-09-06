@@ -3,30 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Desarrolladores - Casino Europeo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="desarrolladores-bg">
-<header>
-    <div class="banner">
-        <a class="contenedor-bar">
-            <nav aria-label="Menu principal" class="main-nav">
-                <ul>
-                    <li class="logo-nav">
-                        <a href="/index.html">
-                            <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
-                        </a>
-                    </li>
-                    <li><a href="/historia.html">Historia</a></li>
-                    <li><a href="/desarrolladores.html"aria-current="page">Desarrolladores</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
-                    <li><a href="ruleta.html">Ruleta</a></li>
-                    <li><a href="transacciones.html">Transacciones</a></li>
-                    <li><a href="/login.html">Iniciar Sesión</a></li>
-                    <li><a href="/registro.html">Registro</a></li>
+    <header>
+        <div class="banner">
+            <a class="contenedor-bar">
+                <nav aria-label="Menu principal" class="main-nav">
+                    <ul>
+                        <li class="logo-nav">
+                            <a href="/index.html">
+                                <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
+                            </a>
+                        </li>
+                        <li><a href="/historia.html">Historia</a></li>
+                        <li><a href="/desarrolladores.html" aria-current="page">Desarrolladores</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="ruleta.html">Ruleta</a></li>
+                        <li><a href="transacciones.html">Transacciones</a></li>
+                        <li><a href="/login.html">Iniciar Sesión</a></li>
+                        <li><a href="/registro.html">Registro</a></li>
+                    </ul>
+                </nav>
+            </a>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h1 class="cabeza-pag">
+            <span class="titulo-desarrolladores">Acerca de la aplicación y desarrolladores</span>
+        </h1>
+
+        <section class="seccion-app">
+            <div class="card card-app">
+                <h2>Sobre la aplicación</h2>
+                <p>Este sitio simula una plataforma de casino centrada en la ruleta europea. Su propósito es académico: practicar maquetación con HTML semántico y estilos con CSS sin frameworks, más el diseño de una navegación coherente.</p>
+                <ul class="lista-caracteristicas">
+                    <li>HTML y CSS puros, sin frameworks</li>
+                    <li>Diseño para resoluciones de 1728×864 a 1920×1080</li>
+                    <li>Contenido ficticio salvo esta página e "Historia y reglas"</li>
                 </ul>
-            </nav>
-        </a>
-    </div>
-</header>
+            </div>
+        </section>
+
+        <section class="seccion-tecnologias">
+            <div class="card card-tecnologias">
+                <h2>Tecnologías utilizadas</h2>
+                <div class="grid-tecnologias">
+                    <div class="tecnologia-item">
+                        <h3>HTML5 semántico</h3>
+                        <p>Uso de header, nav, main, article, section y footer, además de atributos ARIA.</p>
+                    </div>
+                    <div class="tecnologia-item">
+                        <h3>CSS moderno</h3>
+                        <p>Grid, Flexbox, variables CSS, unidades relativas, y control de anchos con max-width.</p>
+                    </div>
+                    <div class="tecnologia-item">
+                        <h3>Accesibilidad</h3>
+                        <p>Etiquetas, roles, contraste y navegación por teclado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-equipo">
+            <div class="card card-equipo">
+                <h2>Equipo de desarrollo</h2>
+                <div class="grid-equipo">
+                    <div class="miembro-equipo">
+                        <div class="miembro-header">
+                            <h3>Gustavo Fernández</h3>
+                            <span class="miembro-rol">Estudiante de Ingenieria Civil en Informatica y Telecomunicaciones</span>
+                        </div>
+                        <p class="miembro-desc">Proyecto Desarrollo Web sobre Ruleta europea.</p>
+                        <p> Universidad Diego Portales.</p>
+                    </div>
+                    <div class="miembro-equipo">
+                        <div class="miembro-header">
+                            <h3>Benjamin Gutierrez</h3>
+                            <span class="miembro-rol">Estudiante de Ingenieria Civil en Informatica y Telecomunicaciones</span>
+                        </div>
+                        <p class="miembro-desc">Proyecto Desarrollo Web sobre Ruleta europea.</p>
+                        <p> Universidad Diego Portales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-aclaracion">
+            <div class="card card-aclaracion">
+                <h2>Aclaración</h2>
+                <p>Esta pagina solo tiene fines academicos. No se hace manejo de dinero ni transacciones de este.</p>
+            </div>
+        </section>
+    </main>
 </body>
+</html>

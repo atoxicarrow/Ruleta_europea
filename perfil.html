@@ -3,31 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Perfil - Casino Europeo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="perfil-bg">
-<header>
-    <div class="banner">
-        <a class="contenedor-bar">
-            <nav aria-label="Menu principal" class="main-nav">
-                <ul>
-                    <li class="logo-nav">
-                        <a href="/index.html">
-                            <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
-                        </a>
-                    </li>
-                    <li><a href="/historia.html">Historia</a></li>
-                    <li><a href="/desarrolladores.html">Desarrolladores</a></li>
-                    <li><a href="perfil.html"aria-current="page">Perfil</a></li>
-                    <li><a href="ruleta.html">Ruleta</a></li>
-                    <li><a href="transacciones.html">Transacciones</a></li>
-                    <li><a href="/login.html" >Iniciar Sesión</a></li>
-                    <li><a href="/registro.html">Registro</a></li>
-                </ul>
-            </nav>
-        </a>
-    </div>
-</header>
+    <header>
+        <div class="banner">
+            <a class="contenedor-bar">
+                <nav aria-label="Menu principal" class="main-nav">
+                    <ul>
+                        <li class="logo-nav">
+                            <a href="/index.html">
+                                <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
+                            </a>
+                        </li>
+                        <li><a href="/historia.html">Historia</a></li>
+                        <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+                        <li><a href="perfil.html" aria-current="page">Perfil</a></li>
+                        <li><a href="ruleta.html">Ruleta</a></li>
+                        <li><a href="transacciones.html">Transacciones</a></li>
+                        <li><a href="/login.html">Iniciar Sesión</a></li>
+                        <li><a href="/registro.html">Registro</a></li>
+                    </ul>
+                </nav>
+            </a>
+        </div>
+    </header>
+
+    <main class="contenedor-perfil">
+        <h1 class="titulo-perfil">Mi Perfil</h1>
+
+        <section class="seccion-perfil">
+            <div class="card card-perfil">
+                <div class="perfil-header">
+                    <div class="perfil-avatar">
+                        <div class="avatar-circle">JD</div>
+                        <h2>Juan Díaz</h2>
+                    </div>
+                    <button class="btn-editar">Editar Perfil</button>
+                </div>
+
+                <div class="perfil-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Información Personal</h3>
+                            <div class="info-datos">
+                                <p><strong>Nombre:</strong> Gustavo Fernandez</p>
+                                <p><strong>Email:</strong> gustavo.fernandez@mail.udp.cl</p>
+                                <p><strong>Usuario:</strong> gustavo_fernandez</p>
+                                <p><strong>Fecha de Nacimiento:</strong> 07/02/2005</p>
+                                <p><strong>País:</strong> Chile</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <h3>Estadísticas de Juego</h3>
+                            <div class="info-datos">
+                                <p><strong>Partidas jugadas:</strong> 127</p>
+                                <p><strong>Victorias:</strong> 43</p>
+                                <p><strong>Porcentaje de victoria:</strong> 33.8%</p>
+                                <p><strong>Apuesta máxima:</strong> €500</p>
+                                <p><strong>Apuesta preferida:</strong> Rojo/Negro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-saldo">
+            <div class="card card-saldo">
+                <h2>Saldo Actual</h2>
+                <div class="saldo-monto">€2,450.00</div>
+                <div class="saldo-acciones">
+                    <button class="btn-deposito">Depositar Fondos</button>
+                    <button class="btn-retiro">Retirar Fondos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-preferences">
+            <div class="card card-preferences">
+                <h2>Preferencias de Juego</h2>
+                <div class="preferences-grid">
+                    <div class="preference-item">
+                        <h3>Ruleta Preferida</h3>
+                        <p>Europea (Un solo cero)</p>
+                    </div>
+                    <div class="preference-item">
+                        <h3>Estrategia de Apuestas</h3>
+                        <p>Martingale</p>
+                    </div>
+                    <div class="preference-item">
+                        <h3>Límite de Apuesta</h3>
+                        <p>€100 por partida</p>
+                    </div>
+                    <div class="preference-item">
+                        <h3>Notificaciones</h3>
+                        <p>Activadas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-actions">
+            <div class="card card-actions">
+                <h2>Acciones de Cuenta</h2>
+                <div class="actions-grid">
+                    <button class="btn-action btn-historial">Ver Historial</button>
+                    <button class="btn-action btn-seguridad">Seguridad</button>
+                    <button class="btn-action btn-soporte">Soporte</button>
+                    <button class="btn-action btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+</html>
