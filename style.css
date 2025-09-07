@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}   
+
 /* FONDOS */
 html,body{
     height:100%;
@@ -22,7 +26,10 @@ body.transacciones-bg {
     background-position: center;
 }
 body.ruleta-bg {
-    background-color: #7a7261;
+    background-image: url('/images/trouville-casino-trouville-machines-a-sous-2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 body.perfil-bg {
     background-image: url('/images/juegos.png');
@@ -38,7 +45,7 @@ body.desarrolladores-bg {
 
 }
 body.historia-bg {
-    background-image: url('/images/juegos.png');
+    background-image: url('/images/ruletota.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -613,16 +620,249 @@ main.contenedor {
 
 /* Ruleta */
 
+/* RULETA */
+.contenedor-ruleta {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-ruleta {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.seccion-ruleta,
+.seccion-apuestas,
+.seccion-info {
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #d3d2cf;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.card h2 {
+    color: #375B77;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4CA094;
+}
+
+.ruleta-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.ruleta-imagen {
+    background: #d3d2cf;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #375B77;
+}
+
+.imagen-ruleta {
+    width: 400px;
+    height: 400px;
+    background: #7a7261;
+    border: 8px solid #4CA094;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.ruleta-estado {
+    margin-top: 20px;
+    color: #375B77;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formulario-apuesta {
+    background: #d3d2cf;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #CCCCCC;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #FFFFFF;
+}
+
+.btn-apostar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #4CA094;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.info-partida {
+    background: #d3d2cf;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.info-partida p {
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.info-partida strong {
+    color: #375B77;
+}
+
+
+
 /* Transaccion */
+
+.contenedor-transacciones {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-transacciones {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.seccion-saldo,
+.seccion-formularios,
+.seccion-historial {
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #FFF;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.card h2 {
+    color: #ffd000;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.formularios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.formulario-item {
+    background: #d8d4d4;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.formulario-item h3 {
+    color: #375B77;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #555555;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid #CCCCCC;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-depositar,
+.btn-retirar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-depositar {
+    background: #4CA094;
+    color: #FFFFFF;
+}
+
+.btn-retirar {
+    background: #375B77;
+    color: #FFFFFF;
+}
+
+.tabla-transacciones {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.tabla-transacciones th {
+    background: #375B77;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla-transacciones td {
+    padding: 12px 15px;
+    border-bottom: 1px;
+    color: #555555;
+}
 
 /* DESARROLLADORES */
 .titulo-desarrolladores {
     display: inline-block;
     padding: 16px 32px;
     border-radius: 16px;
-    background: #375B77;
     color: #FFFFFF;
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 40px;
 }
 

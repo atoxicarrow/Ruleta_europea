@@ -3,33 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Transacciones - Casino Europeo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="transacciones-bg">
-<header>
-    <div class="banner">
-        <a class="contenedor-bar">
-            <nav aria-label="Menu principal" class="main-nav">
-                <ul>
-                    <li class="logo-nav">
-                        <a href="/index.html">
-                            <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
-                        </a>
-                    </li>
-                    <li><a href="/historia.html">Historia</a></li>
-                    <li><a href="/desarrolladores.html">Desarrolladores</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
-                    <li><a href="ruleta.html">Ruleta</a></li>
-                    <li><a href="transacciones.html"aria-current="page">Transacciones</a></li>
-                    <li><a href="/login.html">Iniciar Sesión</a></li>
-                    <li><a href="/registro.html">Registro</a></li>
-                </ul>
-            </nav>
-        </a>
-    </div>
+    <header>
+        <div class="banner">
+            <a class="contenedor-bar">
+                <nav aria-label="Menu principal" class="main-nav">
+                    <ul>
+                        <li class="logo-nav">
+                            <a href="/index.html">
+                                <img src="/images/dog.jpg" alt="Logo de la página" class="logo-img">
+                            </a>
+                        </li>
+                        <li><a href="/historia.html">Historia</a></li>
+                        <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="ruleta.html">Ruleta</a></li>
+                        <li><a href="transacciones.html" aria-current="page">Transacciones</a></li>
+                        <li><a href="/login.html">Iniciar Sesión</a></li>
+                        <li><a href="/registro.html">Registro</a></li>
+                    </ul>
+                </nav>
+            </a>
+        </div>
+    </header>
 
+    <main class="contenedor-transacciones">
+        <h1 class="titulo-transacciones">Transacciones</h1>
 
-    
-</header>
+        <section class="seccion-saldo">
+            <div class="card">
+                <h2>Saldo Actual: $24.500 CLP</h2>
+            </div>
+        </section>
+
+        <section class="seccion-formularios">
+            <div class="card">
+                <h2>Realizar Transacción</h2>
+                <div class="formularios-grid">
+                    <div class="formulario-item">
+                        <h3>Depositar Fondos</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="monto-deposito">Monto:</label>
+                                <input type="number" id="monto-deposito" min="10" placeholder="$">
+                            </div>
+                            <button type="submit" class="btn-depositar">Depositar</button>
+                        </form>
+                    </div>
+
+                    <div class="formulario-item">
+                        <h3>Retirar Fondos</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="monto-retiro">Monto:</label>
+                                <input type="number" id="monto-retiro" min="20" placeholder="$">
+                            </div>
+                            <button type="submit" class="btn-retirar">Retirar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-historial">
+            <div class="card">
+                <h2>Historial de Transacciones</h2>
+                <table class="tabla-transacciones">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15/09/2025</td>
+                            <td>Depósito</td>
+                            <td>+$50.000</td>
+                            <td>Completado</td>
+                        </tr>
+                        <tr>
+                            <td>14/09/2025</td>
+                            <td>Apuesta Ruleta</td>
+                            <td>-$50.000</td>
+                            <td>Completado</td>
+                        </tr>
+                        <tr>
+                            <td>13/09/2025</td>
+                            <td>Retiro</td>
+                            <td>-$20.000</td>
+                            <td>Pendiente</td>
+                        </tr>
+                        <tr>
+                            <td>12/09/2025</td>
+                            <td>Ganancia Ruleta</td>
+                            <td>+$35.000</td>
+                            <td>Completado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 </body>
+</html>
