@@ -9,7 +9,7 @@
 <body class="transacciones-bg">
     <header>
         <div class="banner">
-            <a class="contenedor-bar">
+            <div class="contenedor-bar">
                 <nav aria-label="Menu principal" class="main-nav">
                     <ul>
                         <li class="logo-nav">
@@ -26,27 +26,24 @@
                         <li><a href="/registro.html">Registro</a></li>
                     </ul>
                 </nav>
-            </a>
+            </div>
         </div>
     </header>
 
     <main class="contenedor-transacciones">
         <h1 class="titulo-transacciones">Transacciones</h1>
 
-        <!-- Sección de Saldo Actual -->
         <section class="seccion-saldo">
             <div class="card">
                 <h2>Saldo Actual: <span id="saldo-actual">$0</span> CLP</h2>
             </div>
         </section>
 
-        <!-- Sección de Formularios -->
         <section class="seccion-formularios">
             <div class="card">
                 <h2>Realizar Transacción</h2>
                 <div class="formularios-grid">
                     
-                    <!-- Formulario de Depósito -->
                     <div class="formulario-item">
                         <h3>Depositar Fondos</h3>
                         <form id="form-deposito">
@@ -58,15 +55,13 @@
                                 <label for="numero-tarjeta">Número de Tarjeta:</label>
                                 <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
                             </div>
-                            <div class="form-group-fila">
-                                <div class="form-group-medio">
+                            <div class="form-group">
                                     <label for="fecha-expiracion">Fecha de Expiración:</label>
                                     <input type="month" id="fecha-expiracion" required>
-                                </div>
-                                <div class="form-group-medio">
+                            </div>
+                            <div class="form-group">                            
                                     <label for="cvv">CVV:</label>
                                     <input type="text" id="cvv" placeholder="123" maxlength="3" required>
-                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="monto-deposito">Monto a Depositar:</label>
@@ -95,24 +90,19 @@
                                     <option value="Banco de Chile">Banco de Chile</option>
                                     <option value="Banco Estado">Banco Estado</option>
                                     <option value="Banco Santander">Banco Santander</option>
-                                    <option value="Banco BCI">Banco BCI</option>
-                                    <option value="Banco Itaú">Banco Itaú</option>
-                                    <option value="Scotiabank">Scotiabank</option>
-                                    <option value="Banco Falabella">Banco Falabella</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="monto-retiro">Monto a Retirar:</label>
                                 <input type="number" id="monto-retiro" min="1" placeholder="$" step="1" required>
                             </div>
-                            <button type="submit" class="btn-retirar">Retirar</button>
+                            <button type="submit" id="btn-retirar">Retirar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Historial de Transacciones -->
         <section class="seccion-historial">
             <div class="card">
                 <h2>Historial de Transacciones</h2>
@@ -126,14 +116,12 @@
                         </tr>
                     </thead>
                     <tbody id="cuerpo-historial">
-                        <!-- Las transacciones se cargarán aquí dinámicamente -->
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
 
-    <!-- Modal para Confirmación de Transacciones -->
     <div id="modal-confirmacion" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
@@ -145,7 +133,6 @@
             </div>
         </div>
     </div>
-    <!-- Modal para Resultado de Transacción -->
     <div id="modal-resultado" class="modal">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
