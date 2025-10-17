@@ -103,18 +103,8 @@ body, header{
 }
 
 /* LOGO */
-.logo-nav {
-    margin-right: auto;
-    margin-left: 0px;
-    padding-right: 24px;
-}
-
-
-.logo-img{
-    height:70px;
-    width:auto;
-    display:block;
-}
+.logo-nav{margin-right:auto;margin-left:0;padding-right:24px;}
+.logo-img{height:70px;width:auto;display:block;}
 
 
 /* ACCESO */
@@ -163,43 +153,27 @@ body, header{
     
 }
 
-.btn-iniciar:hover {
-    background: #35796b;
-}
-
-.btn-registro {
-    background: #CC5C16;
-    color: #35796b;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-registro:hover {
-    background: #a1400f;
-}
+.btn-iniciar,.btn-registro,.btn-registrarse,.btn-apostar,.btn-depositar,.btn-retirar,.historia-btn,.reglas-btn,.btn-index,.btn-primario,.btn-secundario{border:none;border-radius:25px;padding:12px 24px;font-size:16px;font-weight:bold;cursor:pointer;transition:background .2s,color .2s;text-align:center;text-decoration:none;display:inline-block;}
+.btn-iniciar{background:#4CA094;color:#fff;}
+.btn-iniciar:hover{background:#35796b;}
+.btn-registro{background:#CC5C16;color:#35796b;}
+.btn-registro:hover{background:#a1400f;}
+.btn-registrarse{background:#35796b;color:#fff;width:100%;padding:16px 0;font-size:1.1rem;margin-top:12px;}
+.btn-registrarse:hover{background:#a1400f;}
+.btn-apostar,.btn-depositar,.btn-retirar{background:#4CA094;color:#fff;width:100%;padding:15px;}
+.historia-btn,.reglas-btn{background:#4CA094;color:#d3d2cf;padding:16px 36px;font-size:1.2rem;margin-top:16px;}
+.historia-btn:hover,.reglas-btn:hover{background:#35796b;}
+.btn-index,.btn-primario,.btn-secundario{padding:15px 30px;font-size:18px;}
+.btn-primario{background:#4CA094;color:#fff;border:2px solid #4CA094;}
+.btn-secundario{background:transparent;color:#fff;border:2px solid #fff;}
+.btn-index:hover,.btn-primario:hover,.btn-secundario:hover{opacity:.9;color:#1c463f;}
+.btn-secundario:hover{background:#4aa84a;}
 
 
-.form-login input[type="text"],
-.form-login input[type="password"] {
-    width: 100%;
-    padding: 18px;
-    margin-bottom: 16px;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    outline:none;
-    font-size: 16px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-     border: 1.5px solid #bbb;
-    border-radius: 12px;
-}
+
+.form-login input[type="text"],.form-login input[type="password"],.registro-col input[type="text"],.registro-col input[type="email"],.registro-col input[type="date"],.registro-col input[type="password"],.form-group input,.form-group select{width:100%;padding:12px 16px;margin-bottom:16px;border:1.5px solid #bbb;border-radius:12px;box-sizing:border-box;outline:none;font-size:16px;transition:border-color .2s,box-shadow .2s;background:#f7f7f7;}
+.form-group input{width:95%;padding:10px;}
+.registro-col input:focus{border-color:#35796b;}
 
 .olvido{
     width: 100%;
@@ -828,9 +802,14 @@ main.contenedor {
 
 .card-app,
 .card-tecnologias,
-.card-equipo,
-.card-aclaracion {
+.card-equipo {
     background: #d3d2cf;
+    padding: 40px;
+    border-radius: 20px;
+}
+.card-aclaracion {
+    background: #375B77;
+    color: #FFFFFF;
     padding: 40px;
     border-radius: 20px;
 }
@@ -986,4 +965,33 @@ main.contenedor {
     background: #FFFFFF;
     padding: 25px;
     border-radius: 15px;
+}
+
+
+/*VENTANA*/
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.cerrar {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
