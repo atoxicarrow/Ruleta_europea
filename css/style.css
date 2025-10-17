@@ -426,9 +426,6 @@ main.contenedor {
     text-align: justify;
 }
 
-#reglas-cards {
-    margin-top: 50px;
-}
 
 /* INDEX */
 .contenedor-index {
@@ -955,16 +952,17 @@ main.contenedor {
 }
 
 
-.preferences-grid {
+.preferencias-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
-.preference-item {
+.preferencias-item {
     background: #FFFFFF;
     padding: 25px;
     border-radius: 15px;
+<<<<<<< HEAD
 }
 
 
@@ -994,4 +992,6 @@ main.contenedor {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+=======
+>>>>>>> fa5919f24f4d9d9c644b2105b500b17f583b0376
 }
