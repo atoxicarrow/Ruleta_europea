@@ -54,7 +54,7 @@ document.getElementById('resultado-aceptar').addEventListener('click', function(
 function validarFormularioDeposito() {
     const tarjeta = document.getElementById('numero-tarjeta').value.replace(/\s/g, '');
     const cvv = document.getElementById('cvv').value;
-    const fecha = document.getElementById('fecha-expiracion').value;
+    var fecha = document.getElementById('fecha-expiracion').value;
     
     if (tarjeta.length !== 16) {
         mostrarResultado('Error', 'Número de tarjeta inválido');

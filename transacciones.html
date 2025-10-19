@@ -19,9 +19,9 @@
                         </li>
                         <li><a href="/historia.html">Historia</a></li>
                         <li><a href="/desarrolladores.html">Desarrolladores</a></li>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="ruleta.html">Ruleta</a></li>
-                        <li><a href="transacciones.html" aria-current="page">Transacciones</a></li>
+                        <li><a href="/perfil.html">Perfil</a></li>
+                        <li><a href="/ruleta.html">Ruleta</a></li>
+                        <li><a href="/transacciones.html" aria-current="page">Transacciones</a></li>
                         <li><a href="/login.html">Iniciar Sesión</a></li>
                         <li><a href="/registro.html">Registro</a></li>
                     </ul>
@@ -47,23 +47,23 @@
                     <div class="formulario-item">
                         <h3>Depositar Fondos</h3>
                         <form id="form-deposito">
-                            <div class="form-group">
+                            <div class="form-group-transacciones">
                                 <label for="nombre-titular-deposito">Nombre del Titular:</label>
                                 <input type="text" id="nombre-titular-deposito" placeholder="Ej: Juan Pérez" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group-transacciones">
                                 <label for="numero-tarjeta">Número de Tarjeta:</label>
                                 <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group-transacciones">
                                     <label for="fecha-expiracion">Fecha de Expiración:</label>
                                     <input type="month" id="fecha-expiracion" required>
                             </div>
-                            <div class="form-group">                            
+                            <div class="form-group-transacciones">                            
                                     <label for="cvv">CVV:</label>
                                     <input type="text" id="cvv" placeholder="123" maxlength="3" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group-transacciones">
                                 <label for="monto-deposito">Monto a Depositar:</label>
                                 <input type="number" id="monto-deposito" min="1" placeholder="$" step="1" required>
                             </div>
@@ -75,15 +75,15 @@
                     <div class="formulario-item">
                         <h3>Retirar Fondos</h3>
                         <form id="form-retiro">
-                            <div class="form-group">
+                            <div class="form-group-transacciones label">
                                 <label for="nombre-titular-retiro">Nombre del Titular:</label>
                                 <input type="text" id="nombre-titular-retiro" placeholder="Ej: Juan Pérez" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group-transacciones label">
                                 <label for="numero-cuenta">Número de Cuenta:</label>
                                 <input type="text" id="numero-cuenta" placeholder="Ej: 123456789" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group-transacciones">
                                 <label for="banco">Banco:</label>
                                 <select id="banco" required>
                                     <option value="">Seleccionar banco</option>
@@ -92,7 +92,7 @@
                                     <option value="Banco Santander">Banco Santander</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group-transacciones label">
                                 <label for="monto-retiro">Monto a Retirar:</label>
                                 <input type="number" id="monto-retiro" min="1" placeholder="$" step="1" required>
                             </div>

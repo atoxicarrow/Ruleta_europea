@@ -1,49 +1,55 @@
 html {
     scroll-behavior: smooth;
-}   
+}
 
 /* FONDOS */
-html,body{
-    height:100%;
+html, body {
+    height: 100%;
     min-height: 100vh;
 }
+
 body.login-bg {
     background-image: url('/images/juegos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 body.registro-bg {
     background-image: url('/images/Wallpaper_ruleta.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 body.transacciones-bg {
     background-image: url('/images/plata3.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 body.ruleta-bg {
     background-image: url('/images/Casino2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 body.perfil-bg {
     background-image: url('/images/juegos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 body.desarrolladores-bg {
     background-image: url('/images/juegos.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
+
 body.historia-bg {
     background-image: url('/images/ruletota.png');
     background-size: cover;
@@ -52,8 +58,8 @@ body.historia-bg {
 }
 
 /* BARRA NAVEGACION */
-.main-nav ul{
-    list-style:none;
+.main-nav ul {
+    list-style: none;
     margin: 0;
     padding: 8px;
     height: 60px;
@@ -65,14 +71,14 @@ body.historia-bg {
     padding-right: 50px;
 }
 
-.main-nav a{
-    color: white;
+.main-nav a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s, transform 0.2s;
 }
 
-.main-nav a[aria-current="page"]{
+.main-nav a[aria-current="page"] {
     border: 2px solid #4CA094;
     border-radius: 25px;
     padding: 8px 22px;
@@ -82,40 +88,37 @@ body.historia-bg {
     transition: background 0.2s, color 0.2s;
 }
 
-.main-nav li:hover{
+.main-nav li:hover {
     transition: transform 0.2s;
     transform: scale(1.22);
     cursor: pointer;
 }
 
-.main-nav a:hover{
-    color:#CC5C16;
+.main-nav a:hover {
+    color: #CC5C16;
 }
 
-
-body, header{
+body, header {
     margin: 0;
     padding: 0;
 }
 
-.main-nav li{
+.main-nav li {
     margin-left: 20px;
 }
 
 /* LOGO */
 .logo-nav {
     margin-right: auto;
-    margin-left: 0px;
+    margin-left: 0;
     padding-right: 24px;
 }
 
-
-.logo-img{
-    height:70px;
-    width:auto;
-    display:block;
+.logo-img {
+    height: 70px;
+    width: auto;
+    display: block;
 }
-
 
 /* ACCESO */
 .contenedor-form {
@@ -125,7 +128,6 @@ body, header{
     margin: 0;
     padding: 0;
 }
-
 
 .form-login {
     flex: 1;
@@ -146,11 +148,11 @@ body, header{
 
 .botones-login {
     display: flex;
-    gap:12px;
+    gap: 12px;
     margin-top: 16px;
 }
 
-.btn-iniciar{
+.btn-iniciar {
     background: #4CA094;
     color: #fff;
     border: none;
@@ -160,7 +162,6 @@ body, header{
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
-    
 }
 
 .btn-iniciar:hover {
@@ -186,35 +187,31 @@ body, header{
     background: #a1400f;
 }
 
-
 .form-login input[type="text"],
 .form-login input[type="password"] {
     width: 100%;
     padding: 18px;
     margin-bottom: 16px;
-    border: 2px solid #000000;
     box-sizing: border-box;
-    outline:none;
+    outline: none;
     font-size: 16px;
     transition: border-color 0.2s, box-shadow 0.2s;
-     border: 1.5px solid #bbb;
+    border: 1.5px solid #bbb;
     border-radius: 12px;
 }
 
-.olvido{
+.olvido {
     width: 100%;
     text-align: center;
     color: #CC5C16;
     display: flex;
     margin-left: 78px;
-    margin-top:10px;
+    margin-top: 10px;
     font-weight: bold;
     font-size: 14px;
 }
 
-
 /* Registro */
-
 .form-registro {
     flex: 1;
     display: flex;
@@ -226,7 +223,7 @@ body, header{
 .form-registro form {
     width: 100%;
     max-width: 700px;
-    padding: 32px 32px 32px 32px;
+    padding: 32px;
     border-radius: 16px;
     background: #fff;
     margin: 32px auto;
@@ -293,32 +290,30 @@ body, header{
 }
 
 /* Historia */
-
 main.contenedor {
     max-width: 1600px;
     margin: 40px auto;
     padding: 24px 16px;
     border-radius: 16px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.cabeza-pag{
+.cabeza-pag {
     text-align: center;
     color: #fff;
     font-size: 32px;
-    font-weight: arial;
+    font-weight: normal;
     margin-top: 32px;
     margin-bottom: 32px;
 }
 
-.titulo-historia{
+.titulo-historia {
     display: inline-block;
     padding: 16px 32px;
     border-radius: 16px;
 }
 
-.card{
+.card-historia {
     background: #d3d2cf;
     padding: 30px;
     border-radius: 15px;
@@ -326,11 +321,8 @@ main.contenedor {
     border: none;
 }
 
-
-
 .hero-historia {
-    width: center;
-    min-height: center;
+    min-height: auto;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -343,10 +335,9 @@ main.contenedor {
     flex-direction: column;
     align-items: center;
     padding-bottom: 610px;
-    
 }
 
-.hero-btns{
+.hero-btns {
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -365,10 +356,10 @@ main.contenedor {
     margin-top: 16px;
     transition: background 0.2s, color 0.2s;
 }
+
 .historia-btn:hover {
     background: #35796b;
 }
-
 
 .reglas-btn {
     background: #4CA094;
@@ -382,24 +373,25 @@ main.contenedor {
     margin-top: 16px;
     transition: background 0.2s, color 0.2s;
 }
+
 .reglas-btn:hover {
     background: #35796b;
 }
 
-/* TABLA HISTORIA*/
+/* TABLA HISTORIA */
 .tabla-apuestas {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: white;
+    background: #fff;
     border-radius: 12px;
     overflow: hidden;
 }
 
 .tabla-apuestas thead {
     background-color: #4CA094;
-    color: white;
+    color: #fff;
 }
 
 .tabla-apuestas th {
@@ -439,14 +431,14 @@ main.contenedor {
     font-weight: bold;
 }
 
-.card h3 {
+.card-historia h3 {
     color: #4CA094;
     font-size: 27px;
     margin-bottom: 16px;
     padding-bottom: 8px;
 }
 
-.card p {
+.card-historia p {
     line-height: 1.6;
     margin-bottom: 16px;
     text-align: justify;
@@ -466,7 +458,7 @@ main.contenedor {
 .hero-index {
     text-align: center;
     padding: 80px 20px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .hero-content-index h1 {
@@ -495,11 +487,11 @@ main.contenedor {
 
 .btn-index:hover {
     opacity: 0.9;
-    color:#1c463f;
+    color: #1c463f;
     transition: background 0.2s, color 0.2s;
 }
 
-.btn-secundario:hover{
+.btn-secundario:hover {
     opacity: 0.9;
     background: #4aa84a;
     transition: background 0.2s, color 0.2s;
@@ -507,14 +499,14 @@ main.contenedor {
 
 .btn-primario {
     background: #4CA094;
-    color: #ffffff;
+    color: #fff;
     border: 2px solid #4CA094;
 }
 
 .btn-secundario {
     background: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .caracteristicas-index {
@@ -526,7 +518,7 @@ main.contenedor {
 
 .caracteristicas-index h2 {
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 40px;
 }
@@ -551,7 +543,7 @@ main.contenedor {
 }
 
 .card-caracteristica p {
-    color: #666666;
+    color: #666;
     line-height: 1.6;
     font-size: 16px;
 }
@@ -562,7 +554,7 @@ main.contenedor {
 
 .acciones-rapidas h2 {
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 40px;
 }
@@ -575,7 +567,7 @@ main.contenedor {
 
 .card-accion {
     background: #375B77;
-    color: #ffffff;
+    color: #fff;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
@@ -588,22 +580,20 @@ main.contenedor {
 }
 
 .card-accion p {
-    color: #cccccc;
+    color: #ccc;
     font-size: 16px;
 }
 
 .footer-index {
     text-align: center;
     padding: 30px;
-    color: #ffffff;
+    color: #fff;
     background: #375B77;
     margin-top: 60px;
     font-size: 16px;
 }
 
-
 /* Ruleta */
-
 .contenedor-ruleta {
     width: 1000px;
     margin: 0 auto;
@@ -612,7 +602,7 @@ main.contenedor {
 
 .titulo-ruleta {
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 30px;
 }
@@ -664,26 +654,26 @@ main.contenedor {
     border-radius: 12px;
 }
 
-.form-group {
+.form-group-ruleta {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.form-group-ruleta label {
     display: block;
-    color: #555555;
+    color: #555;
     font-size: 16px;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-.form-group input,
-.form-group select {
+.form-group-ruleta input,
+.form-group-ruleta select {
     width: 100%;
     padding: 12px;
-    border: 2px solid #CCCCCC;
+    border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    background: #FFFFFF;
+    background: #fff;
 }
 
 .btn-apostar {
@@ -694,7 +684,7 @@ main.contenedor {
     font-size: 18px;
     font-weight: bold;
     background: #4CA094;
-    color: #FFFFFF;
+    color: #fff;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -706,21 +696,18 @@ main.contenedor {
 }
 
 .info-partida p {
-    color: #555555;
+    color: #555;
     font-size: 16px;
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #eee;
 }
 
 .info-partida strong {
     color: #375B77;
 }
 
-
-
 /* Transaccion */
-
 .contenedor-transacciones {
     width: 1000px;
     margin: 0 auto;
@@ -729,7 +716,7 @@ main.contenedor {
 
 .titulo-transacciones {
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 30px;
 }
@@ -739,8 +726,6 @@ main.contenedor {
 .seccion-historial {
     margin-bottom: 30px;
 }
-
-
 
 .formularios-grid {
     display: grid;
@@ -760,20 +745,22 @@ main.contenedor {
     margin-bottom: 20px;
 }
 
-.form-group {
+.form-group-transacciones {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.form-group-transacciones label {
     display: block;
-    color: #555555;
+    color: #555;
     font-size: 16px;
 }
 
-.form-group input {
+
+.form-group-transacciones input,
+.form-group-transacciones select {
     width: 95%;
     padding: 10px;
-    border: 2px solid #CCCCCC;
+    border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
 }
@@ -788,21 +775,19 @@ main.contenedor {
     font-weight: bold;
     cursor: pointer;
     background: #4CA094;
-    color: #FFFFFF;
+    color: #fff;
 }
-
-
 
 .tabla-transacciones {
     width: 100%;
     border-collapse: collapse;
-    background: #FFFFFF;
+    background: #fff;
     border-radius: 8px;
 }
 
 .tabla-transacciones th {
     background: #375B77;
-    color: #FFFFFF;
+    color: #fff;
     padding: 15px;
     text-align: left;
     font-weight: bold;
@@ -811,17 +796,15 @@ main.contenedor {
 .tabla-transacciones td {
     padding: 12px 15px;
     border-bottom: 1px;
-    color: #555555;
+    color: #555;
 }
 
-
 /* DESARROLLADORES */
-
 .titulo-desarrolladores {
     display: inline-block;
     padding: 16px 32px;
     border-radius: 16px;
-    color: #FFFFFF;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 40px;
 }
@@ -835,21 +818,18 @@ main.contenedor {
     border-radius: 20px;
 }
 
-
 .lista-caracteristicas {
     padding: 0;
     margin: 25px 0;
 }
 
 .lista-caracteristicas li {
-    color: #555555;
+    color: #555;
     font-size: 18px;
     margin-bottom: 12px;
     padding-left: 30px;
     position: relative;
 }
-
-
 
 .grid-tecnologias {
     display: grid;
@@ -859,7 +839,7 @@ main.contenedor {
 }
 
 .tecnologia-item {
-    background: #FFFFFF;
+    background: #fff;
     padding: 25px;
     border-radius: 15px;
 }
@@ -872,20 +852,19 @@ main.contenedor {
 }
 
 .miembro-equipo {
-    background: #FFFFFF;
+    background: #fff;
     padding: 30px;
     border-radius: 15px;
 }
 
 .card-aclaracion {
     background: #375B77;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .card-aclaracion h2 {
-    color: #FFFFFF;
+    color: #fff;
 }
-
 
 /* PERFIL */
 .contenedor-perfil {
@@ -896,11 +875,10 @@ main.contenedor {
 
 .titulo-perfil {
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
     font-size: 36px;
     margin-bottom: 40px;
 }
-
 
 .perfil-header {
     display: flex;
@@ -920,7 +898,7 @@ main.contenedor {
     height: 200px;
     border-radius: 50%;
     background: #375B77;
-    color: #FFFFFF;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -935,8 +913,6 @@ main.contenedor {
     object-fit: cover;
 }
 
-
-
 .info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -950,7 +926,7 @@ main.contenedor {
 }
 
 .info-datos p {
-    color: #555555;
+    color: #555;
     font-size: 16px;
     margin-bottom: 12px;
 }
@@ -975,7 +951,6 @@ main.contenedor {
     justify-content: center;
 }
 
-
 .preferences-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -983,35 +958,35 @@ main.contenedor {
 }
 
 .preference-item {
-    background: #FFFFFF;
+    background: #fff;
     padding: 25px;
     border-radius: 15px;
 }
 
-
 .modal {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 1000;
 }
 
 .modal-contenido {
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 5px;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
 }
 
 .cerrar {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
