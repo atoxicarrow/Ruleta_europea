@@ -7,82 +7,66 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="ruleta-bg">
-    <header>
-        <div class="banner">
-            <a class="contenedor-bar">
-                <nav aria-label="Menu principal" class="main-nav">
-                    <ul>
-                        <li class="logo-nav">
-                            <a href="/index.html">
-                                <img src="/images/igorBet.jpg" alt="Logo de la página" class="logo-img">
-                            </a>
-                        </li>
-                        <li><a href="/historia.html">Historia</a></li>
-                        <li><a href="/desarrolladores.html">Desarrolladores</a></li>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="ruleta.html" aria-current="page">Ruleta</a></li>
-                        <li><a href="transacciones.html">Transacciones</a></li>
-                        <li><a href="/login.html">Iniciar Sesión</a></li>
-                        <li><a href="/registro.html">Registro</a></li>
-                    </ul>
-                </nav>
-            </a>
+
+<header>
+    <div class="banner">
+        <nav class="main-nav">
+            <ul>
+                <li class="logo-nav">
+                    <a href="/index.html">
+                        <img src="/images/igorBet.jpg" alt="Logo" class="logo-img">
+                    </a>
+                </li>
+                <li><a href="/historia.html">Historia</a></li>
+                <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ruleta.html" aria-current="page">Ruleta</a></li>
+                <li><a href="transacciones.html">Transacciones</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="contenedor-ruleta">
+    <h1 class="titulo-ruleta">Ruleta Europea</h1>
+
+    <section class="seccion-ruleta">
+        <div class="card">
+            <h2>Mesa de Ruleta</h2>
+            <img src="/images/ruleta.png" alt="Ruleta" class="imagen-ruleta">
+            <p id="estado">Ruleta lista</p>
         </div>
-    </header>
+    </section>
 
-    <main class="contenedor-ruleta">
-        <h1 class="titulo-ruleta">Ruleta Europea</h1>
+    <section class="seccion-apuestas">
+        <div class="card">
+            <h2>Realizar Apuesta</h2>
+            <label>Tipo de Apuesta:</label>
+            <select id="tipo-apuesta">
+                <option value="">Seleccionar</option>
+                <option value="rojo">Rojo</option>
+                <option value="negro">Negro</option>
+                <option value="par">Par</option>
+                <option value="impar">Impar</option>
+            </select>
 
-        <section class="seccion-ruleta">
-            <div class="card">
-                <h2>Mesa de Ruleta</h2>
-                <div class="ruleta-container">
-                    <div class="ruleta-imagen">
-                        <img src="/images/ruleta.png" alt="Ruleta Europea" class="imagen-ruleta">
-                        <div class="ruleta-estado">Ruleta lista para jugar</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <label for="monto">Monto a apostar ($CLP):</label>
+            <input type="number" id="monto" placeholder="Monto mínimo $1000">
 
-        <section class="seccion-apuestas">
-            <div class="card">
-                <h2>Realizar Apuesta</h2>
-                <div class="formulario-apuesta">
-                    <div class="form-group">
-                        <label for="tipo-apuesta">Tipo de Apuesta:</label>
-                        <select id="tipo-apuesta">
-                            <option value="">Seleccionar tipo</option>
-                            <option value="numero">Número específico</option>
-                            <option value="color">Color (Rojo/Negro)</option>
-                            <option value="par-impar">Par/Impar</option>
-                            <option value="docena">Docena</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="valor-apuesta">Valor de la apuesta:</label>
-                        <input type="text" id="valor-apuesta" placeholder="Ej: 17 o Rojo">
-                    </div>
-                    <div class="form-group">
-                        <label for="monto-apuesta">Monto a apostar ($ CLP):</label>
-                        <input type="number" id="monto-apuesta" min="1" placeholder="$">
-                    </div>
-                    <button type="submit" class="btn-apostar">Realizar Apuesta</button>
-                </div>
-            </div>
-        </section>
+            <button id="apostar">Apostar</button>
+            <button id="girar">Girar Ruleta</button>
+        </div>
+    </section>
 
-        <section class="seccion-info">
-            <div class="card">
-                <h2>Información de la Partida</h2>
-                <div class="info-partida">
-                    <p><strong>Saldo disponible:</strong> $245.000</p>
-                    <p><strong>Apuesta mínima:</strong> $1.000</p>
-                    <p><strong>Apuesta máxima:</strong> $500.000</p>
-                    <p><strong>Último resultado:</strong> 32 Rojo</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="seccion-info">
+        <div class="card">
+            <h2>Información</h2>
+            <p><b>Saldo:</b> <span id="saldo">$245000</span></p>
+            <p><b>Último resultado:</b> <span id="resultado">-</span></p>
+        </div>
+    </section>
+</main>
+
+<script src="/js/ruleta.js"></script>
 </body>
 </html>
