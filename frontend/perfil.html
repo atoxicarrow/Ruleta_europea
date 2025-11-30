@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Casino Europeo</title>
+    <link rel="stylesheet" href="/css/style.css">    
+</head>
+<body class="perfil-bg">
+    <header>
+        <div class="banner">
+            <a class="contenedor-bar">
+                <nav aria-label="Menu principal" class="main-nav">
+    <ul>
+        <li class="logo-nav">
+            <a href="/index.html">
+                <img src="/images/igorBet.jpg" alt="Logo de la página" class="logo-img">
+            </a>
+        </li>
+
+        <li><a href="/historia.html">Historia</a></li>
+        <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+
+        <li><a href="/perfil.html">Perfil</a></li>
+        <li><a href="/ruleta.html">Ruleta</a></li>
+        <li><a href="/transacciones.html">Transacciones</a></li>
+
+        <li><a href="/login.html">Iniciar Sesión</a></li>
+        <li><a href="/registro.html">Registro</a></li>
+
+        </ul>
+</nav>
+            </a>
+        </div>
+    </header>
+
+    <main class="contenedor-perfil">
+        <h1 class="titulo-perfil">Mi Perfil</h1>
+
+        <section class="seccion-perfil">
+            <div class="card card-perfil">
+                <div class="perfil-header">
+                    <div class="perfil-avatar">
+                        <!-- Puedes dejar la imagen estática o cambiarla si tuvieras avatar en BD -->
+                        <div class="avatar-circle"><img src="/images/felix.jpg" alt="Avatar"></div>
+                        <!-- CAMBIO: ID para el nombre principal -->
+                        <h2 id="header-nombre">Cargando...</h2>
+                    </div>
+                </div>
+
+                <div class="perfil-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Información Personal</h3>
+                            <div class="info-datos">
+                                <!-- CAMBIO: IDs agregados para inyectar datos reales -->
+                                <p><strong>Nombre:</strong> <span id="info-nombre">...</span></p>
+                                <p><strong>Email:</strong> <span id="info-email">...</span></p>
+                                <p><strong>Usuario:</strong> <span id="info-usuario">...</span></p>
+                                <p><strong>Fecha de Nacimiento:</strong> <span id="info-nacimiento">...</span></p>
+                                <p><strong>País:</strong> Chile</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <h3>Estadísticas de Juego</h3>
+                            <div class="info-datos">
+                                <p><strong>Partidas jugadas:</strong> 0</p>
+                                <p><strong>Victorias:</strong> 0</p>
+                                <p><strong>Porcentaje de victoria:</strong> 0%</p>
+                                <p><strong>Apuesta máxima:</strong> -</p>
+                                <p><strong>Apuesta preferida:</strong> -</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-saldo">
+            <div class="card card-saldo">
+                <h2>Saldo Actual</h2>
+                <!-- CAMBIO: ID para el saldo real -->
+                <div class="saldo-monto">$<span id="saldo-usuario">0</span></div>
+                <div class="saldo-acciones">
+                    <!-- Redirige a transacciones -->
+                    <a href="/transacciones.html">
+                        <button id="btn-depositar">Gestionar Fondos</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-preferences">
+            <div class="card card-preferencias">
+                <h2>Preferencias de Juego</h2>
+                <div class="preferencias-grid">
+                    <div class="preferencias-item">
+                        <h3>Ruleta Preferida</h3>
+                        <p>Europea (Un solo cero)</p>
+                    </div>
+                    <div class="preferencias-item">
+                        <h3>Límite de Apuesta</h3>
+                        <p>$100.000 por partida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    <script src="/js/perfil.js"></script>
+    <script src="/js/commons.js"></script>
+</body>
+</html>

@@ -1,0 +1,995 @@
+html { 
+    scroll-behavior: smooth;
+}
+
+/* FONDOS */
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body.login-bg {
+    background-image: url('/images/juegos.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.registro-bg {
+    background-image: url('/images/Wallpaper_ruleta.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.transacciones-bg {
+    background-image: url('/images/plata3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.ruleta-bg {
+    background-image: url('/images/Casino2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.perfil-bg {
+    background-image: url('/images/juegos.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.desarrolladores-bg {
+    background-image: url('/images/juegos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.historia-bg {
+    background-image: url('/images/ruletota.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* BARRA NAVEGACION */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    height: 60px;
+    background-color: #375B77;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.main-nav a[aria-current="page"] {
+    border: 2px solid #4CA094;
+    border-radius: 25px;
+    padding: 8px 22px;
+    color: #fff;
+    background: transparent;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.main-nav li:hover {
+    transition: transform 0.2s;
+    transform: scale(1.22);
+    cursor: pointer;
+}
+
+.main-nav a:hover {
+    color: #CC5C16;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+/* LOGO */
+.logo-nav {
+    margin-right: auto;
+    margin-left: 0;
+    padding-right: 24px;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+/* ACCESO */
+.contenedor-form {
+    display: flex;
+    min-height: 80vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.form-login {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-login form {
+    width: 100%;
+    max-width: 700px;
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    margin: 32px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botones-login {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn-iniciar {
+    background: #4CA094;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-iniciar:hover {
+    background: #35796b;
+}
+
+.btn-registro {
+    background: #CC5C16;
+    color: #35796b;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-registro:hover {
+    background: #a1400f;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    border: 1.5px solid #bbb;
+    border-radius: 12px;
+}
+
+.olvido {
+    width: 100%;
+    text-align: center;
+    color: #CC5C16;
+    display: flex;
+    margin-left: 78px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Registro */
+.form-registro {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-registro form {
+    width: 100%;
+    max-width: 700px;
+    padding: 32px;
+    border-radius: 16px;
+    background: #fff;
+    margin: 32px auto;
+}
+
+.registro-titulo {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: left;
+    color: #222;
+}
+
+.registro-form-grid .registro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    margin-bottom: 32px;
+}
+
+.registro-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro-col label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.registro-col input[type="text"],
+.registro-col input[type="email"],
+.registro-col input[type="date"],
+.registro-col input[type="password"] {
+    padding: 12px 16px;
+    border: 1.5px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f7f7f7;
+    transition: border-color 0.2s;
+}
+
+.registro-col input:focus {
+    border-color: #35796b;
+    outline: none;
+}
+
+.btn-registrarse {
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 12px;
+    background: #35796b;
+}
+
+.btn-registrarse:hover {
+    background: #a1400f;
+    color: #fff;
+}
+
+/* Historia */
+main.contenedor {
+    max-width: 1600px;
+    margin: 40px auto;
+    padding: 24px 16px;
+    border-radius: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabeza-pag {
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.titulo-historia {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 16px;
+}
+
+.card-historia {
+    background: #d3d2cf;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: none;
+}
+
+.hero-historia {
+    min-height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 610px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.historia-btn {
+    background: #4CA094;
+    color: #d3d2cf;
+    border: none;
+    border-radius: 25px;
+    padding: 16px 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.historia-btn:hover {
+    background: #35796b;
+}
+
+.reglas-btn {
+    background: #4CA094;
+    color: #d3d2cf;
+    border: none;
+    border-radius: 25px;
+    padding: 16px 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.reglas-btn:hover {
+    background: #35796b;
+}
+
+/* TABLA HISTORIA */
+.tabla-apuestas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabla-apuestas thead {
+    background-color: #4CA094;
+    color: #fff;
+}
+
+.tabla-apuestas th {
+    padding: 16px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tabla-apuestas td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-apuestas tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-apuestas tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-apuestas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-apuestas strong {
+    color: #375B77;
+}
+
+.seccion-titulo {
+    text-align: center;
+    color: #375B77;
+    font-size: 40px;
+    margin: 90px 0 20px;
+    font-weight: bold;
+}
+
+.card-historia h3 {
+    color: #4CA094;
+    font-size: 27px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+
+.card-historia p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+#reglas-cards {
+    margin-top: 50px;
+}
+
+/* INDEX */
+.contenedor-index {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-index {
+    text-align: center;
+    padding: 80px 20px;
+    color: #fff;
+}
+
+.hero-content-index h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content-index p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero-btns-index {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-index {
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-index:hover {
+    opacity: 0.9;
+    color: #1c463f;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-secundario:hover {
+    opacity: 0.9;
+    background: #4aa84a;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primario {
+    background: #4CA094;
+    color: #fff;
+    border: 2px solid #4CA094;
+}
+
+.btn-secundario {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.caracteristicas-index {
+    padding: 60px 20px;
+    background: #375B77;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.caracteristicas-index h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.grid-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-caracteristica {
+    background: #d3d2cf;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-caracteristica h3 {
+    color: #375B77;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-caracteristica p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.acciones-rapidas {
+    padding: 60px 20px;
+}
+
+.acciones-rapidas h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cuadro-acciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-accion {
+    background: #375B77;
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card-accion h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-accion p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.footer-index {
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    background: #375B77;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+/* Ruleta */
+.contenedor-ruleta {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-ruleta {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.seccion-ruleta,
+.seccion-apuestas,
+.seccion-info {
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #d3d2cf;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.ruleta-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.ruleta-imagen {
+    background: #d3d2cf;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #375B77;
+}
+
+.imagen-ruleta {
+    width: 400px;
+    height: 400px;
+    background: #7a7261;
+    border: 8px solid #4CA094;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.ruleta-estado {
+    margin-top: 20px;
+    color: #375B77;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formulario-apuesta {
+    background: #d3d2cf;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.form-group-ruleta {
+    margin-bottom: 20px;
+}
+
+.form-group-ruleta label {
+    display: block;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group-ruleta input,
+.form-group-ruleta select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff;
+}
+
+.btn-apostar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #4CA094;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.info-partida {
+    background: #d3d2cf;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.info-partida p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-partida strong {
+    color: #375B77;
+}
+
+/* Transaccion */
+.contenedor-transacciones {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-transacciones {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.seccion-saldo,
+.seccion-formularios,
+.seccion-historial {
+    margin-bottom: 30px;
+}
+
+.formularios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.formulario-item {
+    background: #d8d4d4;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.formulario-item h3 {
+    color: #375B77;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-group-transacciones {
+    margin-bottom: 20px;
+}
+
+.form-group-transacciones label {
+    display: block;
+    color: #555;
+    font-size: 16px;
+}
+
+
+.form-group-transacciones input,
+.form-group-transacciones select {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#btn-depositar,
+#btn-retirar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #4CA094;
+    color: #fff;
+}
+
+.tabla-transacciones {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.tabla-transacciones th {
+    background: #375B77;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla-transacciones td {
+    padding: 12px 15px;
+    border-bottom: 1px;
+    color: #555;
+}
+
+/* DESARROLLADORES */
+.titulo-desarrolladores {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.card-app,
+.card-tecnologias,
+.card-equipo,
+.card-aclaracion {
+    background: #d3d2cf;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.lista-caracteristicas {
+    padding: 0;
+    margin: 25px 0;
+}
+
+.lista-caracteristicas li {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.grid-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tecnologia-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.grid-equipo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.miembro-equipo {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.card-aclaracion {
+    background: #375B77;
+    color: #fff;
+}
+
+.card-aclaracion h2 {
+    color: #fff;
+}
+
+/* PERFIL */
+.contenedor-perfil {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-perfil {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.perfil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.perfil-avatar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #375B77;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.info-item h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.info-datos p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.info-datos strong {
+    color: #375B77;
+}
+
+.card-saldo {
+    text-align: center;
+}
+
+.saldo-monto {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.saldo-acciones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.preference-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.cerrar {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+

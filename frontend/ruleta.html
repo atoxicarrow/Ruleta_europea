@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruleta - Casino Europeo</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/ruleta.css" />
+</head>
+<body class="ruleta-bg">
+    <header>
+      <div class="banner">
+        <nav aria-label="Menu principal" class="main-nav">
+          <ul>
+            <li class="logo-nav">
+                <a href="/index.html"><img src="/images/igorBet.jpg" alt="Logo" class="logo-img"></a>
+            </li>
+            <li><a href="/historia.html">Historia</a></li>
+            <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+            <li><a href="/perfil.html">Perfil</a></li>
+            <li><a href="/ruleta.html">Ruleta</a></li>
+            <li><a href="/transacciones.html">Transacciones</a></li>
+            <li><a href="/login.html">Iniciar Sesión</a></li>
+            <li><a href="/registro.html">Registro</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<main class="contenedor-ruleta">
+  <h1 class="titulo-ruleta">Ruleta Europea</h1>
+
+  <section class="seccion-ruleta">
+    <div class="card ruleta-wrapper">
+      <h2>Mesa de Ruleta</h2>
+      <div class="wheel-area">
+        <div id="wheel-container">
+            <canvas id="ruletacanvas" width="420" height="420"></canvas>
+            <div id="wheel-indicator" aria-hidden="true">▼</div>
+        </div>
+        <div class="ruleta-estado" id="ruleta-estado">Ruleta lista para jugar</div>
+      </div>
+
+      <div class="controls">
+        <button id="btngirar" class="btn-apostar">Iniciar Sorteo</button>
+        <div class="saldo-ruleta">Saldo: <span id="saldo">Cargando...</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-apuestas">
+    <div class="card">
+      <h2>Tablero de Apuestas</h2>
+      <p>Haz clic en una casilla para apostar.</p>
+
+      <table class="tabla-apuestas-ruleta" id="bet-table">
+        <thead>
+          <tr><th>Apuesta</th><th>Pago</th><th>Tu Apuesta</th></tr>
+        </thead>
+        <tbody>
+            <tr data-type="color" data-value="rojo" class="bet-row"><td>🔴 Rojo</td><td>1:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="color" data-value="negro" class="bet-row"><td>⚫ Negro</td><td>1:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="parity" data-value="par" class="bet-row"><td>Par</td><td>1:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="parity" data-value="impar" class="bet-row"><td>Impar</td><td>1:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="range" data-value="bajo" class="bet-row"><td>Bajo (1-18)</td><td>1:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="range" data-value="alto" class="bet-row"><td>Alto (19-36)</td><td>1:1</td><td class="bet-cell">-</td></tr>
+            
+            <tr class="separator"><td colspan="3"><strong>Docenas y Columnas (Pagan 2:1)</strong></td></tr>
+            <tr data-type="dozen" data-value="1" class="bet-row"><td>1ra Docena (1-12)</td><td>2:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="dozen" data-value="2" class="bet-row"><td>2da Docena (13-24)</td><td>2:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="dozen" data-value="3" class="bet-row"><td>3ra Docena (25-36)</td><td>2:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="column" data-value="1" class="bet-row"><td>Columna 1 (1, 4...)</td><td>2:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="column" data-value="2" class="bet-row"><td>Columna 2 (2, 5...)</td><td>2:1</td><td class="bet-cell">-</td></tr>
+            <tr data-type="column" data-value="3" class="bet-row"><td>Columna 3 (3, 6...)</td><td>2:1</td><td class="bet-cell">-</td></tr>
+
+            <tr class="separator"><td colspan="3"><strong>Número Exacto (Paga 35:1)</strong></td></tr>
+            <tr class="bet-row-special">
+                <td>
+                    <label for="input-numero">Elegir Número (0-36):</label>
+                    <input type="number" id="input-numero" min="0" max="36" placeholder="#">
+                </td>
+                <td>35:1</td>
+                <td class="bet-cell" id="celda-numero-especifico" data-special="true">-</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<div class="overlay" id="bet-modal">
+  <div class="modal-box">
+    <div class="modal-header"><h3>Apuesta</h3><button class="btn cancel" id="close-bet-modal">✕</button></div>
+  <div class="modal-body">
+    <p id="bet-modal-desc"></p>
+    <label for="bet-amount">Monto de la apuesta:</label>
+    <input type="number" id="bet-amount" min="1000" step="1000" placeholder="Monto CLP" />
+    <div class="modal-actions">
+      <button id="cancel-bet" class="btn cancel">Borrar</button>
+      <button id="save-bet" class="btn confirm">Guardar</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="overlay" id="result-modal">
+  <div class="modal-box">
+    <div class="modal-header"><h3>Resultado</h3><button class="btn cancel" id="close-result-modal">✕</button></div>
+    <div class="modal-body" id="result-body"></div>
+    <div class="modal-actions"><button class="btn confirm" id="ack-result">Aceptar</button></div>
+  </div>
+</div>
+
+<script src="/js/ruleta.js"></script>
+<script src="/js/commons.js"></script>
+</body>
+</html>

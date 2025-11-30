@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones - Casino Europeo</title>
+    <link rel="stylesheet" href="/css/style.css">    
+</head>
+<body class="transacciones-bg">
+    <header>
+    <div class="banner">
+        <div class="contenedor-bar">
+            <nav aria-label="Menu principal" class="main-nav">
+    <ul>
+        <li class="logo-nav">
+            <a href="/index.html">
+                <img src="/images/igorBet.jpg" alt="Logo de la página" class="logo-img">
+            </a>
+        </li>
+
+        <li><a href="/historia.html">Historia</a></li>
+        <li><a href="/desarrolladores.html">Desarrolladores</a></li>
+
+        <li><a href="/perfil.html">Perfil</a></li>
+        <li><a href="/ruleta.html">Ruleta</a></li>
+        <li><a href="/transacciones.html">Transacciones</a></li>
+
+        <li><a href="/login.html">Iniciar Sesión</a></li>
+        <li><a href="/registro.html">Registro</a></li>
+
+        </ul>
+</nav>
+        </div>
+    </div>
+</header>
+
+    <main class="contenedor-transacciones">
+        <h1 class="titulo-transacciones">Transacciones</h1>
+
+        <section class="seccion-saldo">
+            <div class="card">
+                <h2>Saldo Actual: <span id="saldo-actual">$0</span> CLP</h2>
+            </div>
+        </section>
+
+        <section class="seccion-formularios">
+            <div class="card">
+                <h2>Realizar Transacción</h2>
+                <div class="formularios-grid">
+                    
+                    <div class="formulario-item">
+                        <h3>Depositar Fondos</h3>
+                        <form id="form-deposito">
+                            <div class="form-group-transacciones">
+                                <label for="nombre-titular-deposito">Nombre del Titular:</label>
+                                <input type="text" id="nombre-titular-deposito" placeholder="Ej: Juan Pérez" required>
+                            </div>
+                            <div class="form-group-transacciones">
+                                <label for="numero-tarjeta">Número de Tarjeta:</label>
+                                <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+                            <div class="form-group-transacciones">
+                                    <label for="fecha-expiracion">Fecha de Expiración:</label>
+                                    <input type="month" id="fecha-expiracion" required>
+                            </div>
+                            <div class="form-group-transacciones">                            
+                                    <label for="cvv">CVV:</label>
+                                    <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                            </div>
+                            <div class="form-group-transacciones">
+                                <label for="monto-deposito">Monto a Depositar:</label>
+                                <input type="number" id="monto-deposito" min="1" placeholder="$" step="1" required>
+                            </div>
+                            <button type="submit" id="btn-depositar">Depositar</button>
+                        </form>
+                    </div>
+
+                    <div class="formulario-item">
+                        <h3>Retirar Fondos</h3>
+                        <form id="form-retiro">
+                            <div class="form-group-transacciones label">
+                                <label for="nombre-titular-retiro">Nombre del Titular:</label>
+                                <input type="text" id="nombre-titular-retiro" placeholder="Ej: Juan Pérez" required>
+                            </div>
+                            <div class="form-group-transacciones label">
+                                <label for="numero-cuenta">Número de Cuenta:</label>
+                                <input type="text" id="numero-cuenta" placeholder="Ej: 123456789" required>
+                            </div>
+                            <div class="form-group-transacciones">
+                                <label for="banco">Banco:</label>
+                                <select id="banco" required>
+                                    <option value="">Seleccionar banco</option>
+                                    <option value="Banco de Chile">Banco de Chile</option>
+                                    <option value="Banco Estado">Banco Estado</option>
+                                    <option value="Banco Santander">Banco Santander</option>
+                                </select>
+                            </div>
+                            <div class="form-group-transacciones label">
+                                <label for="monto-retiro">Monto a Retirar:</label>
+                                <input type="number" id="monto-retiro" min="1" placeholder="$" step="1" required>
+                            </div>
+                            <button type="submit" id="btn-retirar">Retirar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-historial">
+            <div class="card">
+                <h2>Historial de Transacciones</h2>
+                <table class="tabla-transacciones">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-historial">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-confirmacion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h3 id="modal-titulo">Confirmar Transacción</h3>
+            <p id="modal-mensaje"></p>
+            <div class="modal-botones">
+                <button id="modal-confirmar" class="btn-confirmar">Confirmar</button>
+                <button id="modal-cancelar" class="btn-cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-resultado" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h3 id="resultado-titulo">Resultado de la Transacción</h3>
+            <p id="resultado-mensaje"></p>
+            <div class="modal-botones">
+                <button id="resultado-aceptar" class="btn-aceptar">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/transacciones.js"></script>
+    <script src="/js/commons.js"></script>
+</body>
+</html>

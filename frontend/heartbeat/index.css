@@ -1,0 +1,233 @@
+/* --------------------------------------------------------------------------------
+-- Globals ------------------------------------------------------------------------
+ ----------------------------------------------------------------------------- - */
+
+/* Fonts import */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Colors */
+
+:root {
+    --color-blue-d1: rgb(0 32 56);
+    --color-blue-l1: rgb(73 155 218);
+    --color-blue-l2: rgb(148 180 204);
+    --color-blue-l3: rgb(202 218 230);
+    --color-blue: rgb(0 75 133);
+}
+
+/* Box model */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Global layout */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Font classes */
+
+.code {
+    font-family: 'Fira Code', monospace;
+    font-variant-ligatures: none;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 12px;
+}
+
+/* --------------------------------------------------------------------------------
+-- Layout ---------------------------------------------------------------------- --
+-------------------------------------------------------------------------------- */
+
+/* SPA ------------------------------------------------------------------------- */
+
+/* Layout */
+
+header,
+main,
+footer {
+    display: flex;
+    padding: 16px;
+    gap: 8px;
+}
+
+header,
+footer {
+    padding-left: 19px;
+    padding-right: 19px;
+    background-color: var(--color-blue-l2);
+    border-style: solid;
+    border-color: var(--color-blue-d1);
+    border-width: 2px 0;
+}
+
+header > *,
+main > *:not(dialog),
+footer > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+footer > *:first-child,
+header > *:first-child {
+    text-align: left;
+}
+
+header > *:not(:first-child, :last-child),
+footer > *:not(:first-child, :last-child) {
+    text-align: center;
+}
+
+header > *:last-child:not(:first-child),
+footer > *:last-child:not(:first-child) {
+    text-align: right;
+}
+
+header > * > *,
+footer > * > * {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+main {
+    flex: 1;
+    flex-direction: row;
+    position: relative;
+}
+
+footer {
+    line-height: 14px;
+}
+
+/* Flex classes ---------------------------------------------------------------- */
+
+.flex-1 {
+    flex: 1;
+}
+
+/* Sizings --------------------------------------------------------------------- */
+
+.min700 {
+    min-width: 700px;
+}
+
+/* --------------------------------------------------------------------------------
+-- Forms --------------------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+
+/* Layout ---------------------------------------------------------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+form > * {
+    margin: 0;
+    padding: 0;
+}
+
+form > h4 {
+    margin: 12px 2px;
+}
+
+form > label {
+    margin-left: 2px;
+}
+
+.row {
+    display: flex;
+    gap: 4px;
+}
+
+.row > button {
+    flex: 1;
+}
+
+/* Inputs ---------------------------------------------------------------------- */
+
+button,
+input,
+textarea {
+    border: 2px solid var(--color-blue-d1);
+    border-radius: 4px;
+    padding: 7px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1em;
+    background-color: var(--color-blue-l3);
+}
+
+button:hover {
+    background-color: var(--color-blue-l2);
+}
+
+button:active {
+    border-color: var(--color-blue-l1);
+}
+
+/* --------------------------------------------------------------------------------
+-- Formatting ---------------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+
+/* Links ----------------------------------------------------------------------- */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-blue);
+}
+
+/* Box Border ------------------------------------------------------------------ */
+
+.box-border {
+    border: 2px solid var(--color-blue-d1);
+    border-radius: 4px;
+}
+
+.box-border > * {
+    padding: 0 8px;
+}
+
+.box-border > :first-child:not(dialog) {
+    padding-top: 8px;
+}
+
+.box-border > :not(dialog, :has(~ :not(dialog))) {
+    padding-bottom: 8px;
+}

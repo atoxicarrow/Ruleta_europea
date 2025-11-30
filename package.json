@@ -1,5 +1,32 @@
 {
-  "dependencies": {
-    "stylelint": "^16.25.0"
-  }
+    "name": "www-group",
+    "version": "1.0.0",
+    "description": "",
+    "main": "backend/server.js",
+    "scripts": {
+        "start": "pm2 start commons/configs/pm2.config.js",
+        "restart": "pm2 restart commons/configs/pm2.config.js",
+        "stop": "pm2 stop commons/configs/pm2.config.js",
+        "logs": "pm2 logs",
+        "lint:html": "htmlhint 'frontend/**/*.html' | sed '/Config loaded/d;/^$/d'",
+        "lint:css": "stylelint 'frontend/**/*.css'",
+        "lint:js": "eslint 'frontend/**/*.js' 'backend/**/*.js'",
+        "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+    },
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "bcryptjs": "^3.0.3",
+        "cookie-parser": "^1.4.7",
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "mongodb": "^7.0.0",
+        "mongoose": "^9.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^9.35.0",
+        "htmlhint": "^1.7.1",
+        "stylelint": "^16.24.0",
+        "stylelint-config-standard": "^39.0.0"
+    }
 }
